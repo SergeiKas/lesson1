@@ -1,0 +1,66 @@
+﻿package shop;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String name = "Name";
+        byte a = 32;
+        int b = 0;
+        short c = 12;
+        long d = 2132155454;
+        float e = 13154545125454f;
+
+        System.out.println(find_value(1, 2, 3, 4));
+        System.out.println(check_value(1, 10));
+        plus_minus(-2);
+        System.out.println(minus_number(-1));
+        name("Сергей");
+        year_check(16);
+    }
+
+
+    static int find_value(int a, int b, int c, int d) {
+        return a * (b + (c / d));
+    }
+
+    static boolean check_value(int a, int b) {
+
+        if (a + b >= 10 && a + b <= 20){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    static void plus_minus(int a) {
+        if (a >= 0) {
+            System.out.println("вы ввели положительное число");
+        } else if (a < 0) {
+            System.out.println("вы ввели отрицательное число");
+        }
+    }
+
+    static boolean minus_number(int a) {
+        if (a >= 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    static void name(String name) {
+        System.out.println("Привет " + name + "!");
+    }
+
+    static void year_check(int year) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println("Это високосный год");
+        }else{
+            System.out.println("Год не високосный");
+        }
+    }
+}
+
+
